@@ -2,9 +2,9 @@
   "name": "rest-api-favorites",
   "version": "1.0.0",
   "description": "node angular training",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wilder",

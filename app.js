@@ -1,18 +1,10 @@
-var express = require('express');
 var bodyParser = require('body-parser');
-
+var express = require('express');
 var app = express();
+var api = require('./routes/favorite');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use('/api', api);
 
-app.get('/user/:name?', (req, res) => {
-    var name;
-    req.params.name? name=req.params.name : name='guest';
-    res.status(200).
-        send('hello ' + name);
-});
-
-app.listen(3000, () => {
-console.log('listening on port 3000');
-});
+module.exports = app;
